@@ -1,3 +1,9 @@
+streamlit
 joblib
+keras
 tensorflow==2.5.0
-opencv-python==4.5.3
+opencv-python
+pandas
+numpy
+pillow
+nltk
