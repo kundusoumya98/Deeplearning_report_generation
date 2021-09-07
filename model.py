@@ -22,7 +22,7 @@ col1,col2 = st.columns(2)
 predict_button = col1.button('Predict on uploaded files')
 
 
-@st.cache
+#@st.cache
 def create_model():
     model_tokenizer = cm.create_model()
     return model_tokenizer
