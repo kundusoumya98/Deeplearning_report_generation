@@ -1,7 +1,6 @@
 import joblib
 import os
 import tensorflow as tf
-import tensorflow as tf
 from tensorflow.keras.layers import Dense,GlobalAveragePooling2D, Input, Embedding, LSTM,Dot,Reshape,Concatenate,BatchNormalization, GlobalMaxPooling2D, Dropout, Add, MaxPooling2D, GRU, AveragePooling2D
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
@@ -13,7 +12,7 @@ import os
 import gdown
 
 url='https://drive.google.com/file/d/18O2_q7-FqWK_-kj2mIzu1A5evDmhzL57/view?usp=sharing'
-output='test.h5'
+output='test.h5py'
 gdown.download(url,output,quiet=True)
 chexnet_weights=output
 def create_chexnet(chexnet_weights = chexnet_weights,input_size=(224,224)):
@@ -212,7 +211,7 @@ def create_model():
     model = tf.keras.Model(inputs = [image1,image2,caption], outputs = output)
     
     url='https://drive.google.com/file/d/16M99JLFMwF74kVNif_vfxfXlHmBCjqep/view?usp=sharing'
-    output1='test1.h5'
+    output1='test1.h5py'
     gdown.download(url,output1,quiet=True)
     model_filename =output1
     model_save = model_filename
