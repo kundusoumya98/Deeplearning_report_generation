@@ -9,9 +9,11 @@ import pandas as pd
 import numpy as np
 import cv2
 from nltk.translate.bleu_score import sentence_bleu
+import os
 
-chexnet_weights = $ gdown --id 18O2_q7-FqWK_-kj2mIzu1A5evDmhzL57
 
+cmd='gdown --id 18O2_q7-FqWK_-kj2mIzu1A5evDmhzL57'
+chexnet_weights=os.system(cmd)
 def create_chexnet(chexnet_weights = chexnet_weights,input_size=(224,224)):
     """
     chexnet_weights: weights value in .h5 format of chexnet
@@ -206,7 +208,8 @@ def create_model():
 
     output = decoder(max_pad, embedding_dim,dense_dim,batch_size ,vocab_size)(encoder_output,caption)
     model = tf.keras.Model(inputs = [image1,image2,caption], outputs = output)
-    model_filename = $ gdown --id 16M99JLFMwF74kVNif_vfxfXlHmBCjqep
+    cmd= 'gdown --id 16M99JLFMwF74kVNif_vfxfXlHmBCjqep'
+    model_filename =os.system(cmd)
     model_save = model_filename
     model.load_weights(model_save)
 
