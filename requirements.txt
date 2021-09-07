@@ -2,8 +2,10 @@ streamlit
 joblib
 keras
 tensorflow==2.5.0
-opencv-python
+opencv_python_headless==4.5.1.48
 pandas
 numpy
 pillow
 nltk
+  
+
