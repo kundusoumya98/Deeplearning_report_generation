@@ -10,7 +10,7 @@ import numpy as np
 import cv2
 from nltk.translate.bleu_score import sentence_bleu
 
-chexnet_weights = "brucechou1983_CheXNet_Keras_0.3.0_weights.h5"
+chexnet_weights = "https://docs.google.com/uc?export=download&id=18O2_q7-FqWK_-kj2mIzu1A5evDmhzL57"
 
 def create_chexnet(chexnet_weights = chexnet_weights,input_size=(224,224)):
     """
@@ -206,7 +206,7 @@ def create_model():
 
     output = decoder(max_pad, embedding_dim,dense_dim,batch_size ,vocab_size)(encoder_output,caption)
     model = tf.keras.Model(inputs = [image1,image2,caption], outputs = output)
-    model_filename = 'attention.h5'
+    model_filename = 'https://docs.google.com/uc?export=download&id=16M99JLFMwF74kVNif_vfxfXlHmBCjqep'
     model_save = model_filename
     model.load_weights(model_save)
 
