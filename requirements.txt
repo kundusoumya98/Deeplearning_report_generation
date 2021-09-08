@@ -7,4 +7,5 @@ pandas
 numpy
 pillow
 nltk
-gdown  
+urllib
+requests
