@@ -288,6 +288,6 @@ def function1(image1,image2,model_tokenizer = None):
         caption = predict(i1,i2,model_tokenizer)
         predicted_caption.append(caption)
 
-    return predicted_caption
+    return predi cted_caption
 
 
