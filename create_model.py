@@ -24,8 +24,7 @@ EXTERNAL_DEPENDENCIES = {
     }
 }
 
-for filename in EXTERNAL_DEPENDENCIES.keys():
-    download_file(filename)
+
 
 
 
@@ -39,6 +38,9 @@ def download_file(file_path):
             download_file_from_google_drive(EXTERNAL_DEPENDENCIES[file_path]["id"], os_path)
             
             
+for filename in EXTERNAL_DEPENDENCIES.keys():
+    download_file(filename)
+    
 def get_file_content_as_string(path):    
     url = DATA_URL_PATH + path
     response = urllib.request.urlopen(url)
