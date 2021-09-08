@@ -5,7 +5,7 @@ import time
 from PIL import Image
 import create_model as cm
 
-
+st.markdown("<small>by Soumya Kundu ,Jadavpur University</small>",unsafe_allow_html=True)
 st.title("Chest X-ray Report Generator")
 
 st.markdown("\nThis app will generate impression part of an X-ray report.\nYou can upload 2 X-rays that are front view and side view of chest of the same individual.")
