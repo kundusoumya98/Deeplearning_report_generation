@@ -15,6 +15,15 @@ import os, urllib, cv2
 
 chexnet_weights = "brucechou1983_CheXNet_Keras_0.3.0_weights.h5"
 
+EXTERNAL_DEPENDENCIES = {
+    "attention.h5": {
+        "id": "16M99JLFMwF74kVNif_vfxfXlHmBCjqep"
+    },
+    "brucechou1983_CheXNet_Keras_0.3.0_weights.h5":{
+        "id":"18O2_q7-FqWK_-kj2mIzu1A5evDmhzL57"
+    }
+}
+
 for filename in EXTERNAL_DEPENDENCIES.keys():
     download_file(filename)
 
@@ -39,14 +48,7 @@ def get_file_content_as_string(path):
 DATA_URL_PATH = "https://github.com/kundusoumya98/Deeplearning_report_generation/"
 # External files to download.
 
-EXTERNAL_DEPENDENCIES = {
-    "attention.h5": {
-        "id": "16M99JLFMwF74kVNif_vfxfXlHmBCjqep"
-    },
-    "brucechou1983_CheXNet_Keras_0.3.0_weights.h5":{
-        "id":"18O2_q7-FqWK_-kj2mIzu1A5evDmhzL57"
-    }
-}
+
 def convert_bytes(file_path, unit=None):
     size = os.path.getsize(file_path)
     return str(round(size / (1024 * 1024), 3)) + ' MB'   
