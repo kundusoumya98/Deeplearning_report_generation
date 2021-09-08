@@ -40,7 +40,7 @@ def get_file_content_as_string(path):
 DATA_URL_PATH = "https://github.com/kundusoumya98/Deeplearning_report_generation/"
 # External files to download.
 
-EXTERNAL_DEPENDENCIES = {
+ EXTERNAL_DEPENDENCIES = {
     "attention.h5": {
         "id": "16M99JLFMwF74kVNif_vfxfXlHmBCjqep"
     },
