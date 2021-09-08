@@ -41,12 +41,11 @@ DATA_URL_PATH = "https://github.com/kundusoumya98/Deeplearning_report_generation
 # External files to download.
 
 EXTERNAL_DEPENDENCIES = {
-"attention.h5": {
+    "attention.h5": {
         "id": "16M99JLFMwF74kVNif_vfxfXlHmBCjqep"
     },
     "brucechou1983_CheXNet_Keras_0.3.0_weights.h5":{
-        
-    "id":"18O2_q7-FqWK_-kj2mIzu1A5evDmhzL57"
+        "id":"18O2_q7-FqWK_-kj2mIzu1A5evDmhzL57"
     }
 }
 def convert_bytes(file_path, unit=None):
