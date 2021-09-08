@@ -15,7 +15,6 @@ import os, urllib, cv2
 
 chexnet_weights = "brucechou1983_CheXNet_Keras_0.3.0_weights.h5"
 
-
 for filename in EXTERNAL_DEPENDENCIES.keys():
     download_file(filename)
 
@@ -203,7 +202,8 @@ class decoder(tf.keras.Model):
     """
     def __init__(self,max_pad, embedding_dim,dense_dim,batch_size ,vocab_size):
         super().__init__()
-        self.onestepdecoder = One_Step_Decoder(vocab_size = vocab_size, embedding_dim = embedding_dim, max_pad = max_pad,                           dense_dim=dense_dim)
+        self.onestepdecoder = One_Step_Decoder(vocab_size = vocab_size, embedding_dim = embedding_dim, max_pad = max_pad, 
+                                               dense_dim=dense_dim)
         self.output_array = tf.TensorArray(tf.float32,size=max_pad)
         self.max_pad = max_pad
         self.batch_size = batch_size
@@ -327,6 +327,7 @@ def function1(image1,image2,model_tokenizer = None):
     return predicted_caption
 
 
-
+if __name__ == "__main__":
+    main()
 
 
